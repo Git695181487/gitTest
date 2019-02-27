@@ -1,0 +1,8 @@
+1、eclipse连接github 报错 cannot open git-upload-pack
+其实很简单，网上答案千奇百怪但是如果eclipse的默认JDK是1.7的就简单，如果是1.7以下的请另外百度。。。。
+打开eclipse安装目录下的eclipse.ini添加一句：-Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2  就可以了
+
+2.SSL host could not be verified（set http.sslVerify=false in Git configuration）
+这个是egit插件的配置问题，配置问题.打开eclipse中的windows–>Preferences–>Team–>Git–>Configuration
+–>User Settings.然后点Add Entry新建一个键值对，key为http.sslVerify，value为false
+
